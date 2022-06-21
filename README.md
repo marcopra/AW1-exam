@@ -30,15 +30,7 @@
   - Response Body content:
     - `200 OK` (success): Oggetto contente il piando di studi dell'utente comprensivi di tutti i campi necessari per la visualizzazione a schermo (viene fatto il join tra più tabelle e vengono prese le colonne necessarie).
     - `500 Internal Server Error` (generic error)
-  
-- GET `/api/carico`
-  - Descrizione: Richiesta del carico didattico dell'utente.
-  - Parametri richiesti: Nessuno.
-  - Request body content: Oggetto che rappresenta le credenziali.
-  - Response Body content:
-    - `200 OK` (success): Oggetto contenente il piano di studi dello studente preso dalla tabella "caricoDidattico".
-    - `500 Internal Server Error` (generic error)
-  
+
 - PUT `/api/carico`
   - Descrizione: Richiesta di aggiunta di un esame al carico didattico dell'utente.
   - Parametri richiesti: Nessuno.
@@ -98,12 +90,12 @@
 ## Main React Components
 
 - `FullTable` (in `FullTable.js`): Tabella contenente tutti gli esami che viene visualizzata nella home-page non logged-in.
-- `FullTableCarico` (in `CaricoDidattico.js`): Tabella contenente tutti gli esami che viene visualizzata nella home-page logged-in. Questa tabella ha in più rispetto alla precedente: il bottone di aggiunta, uno spazio per l'eventuale motivazione che spiega il perchè non può essere aggiunto. Le righi di questa tabella si colorano in maniera differente nel caso un esame sia già nel carico o nel caso non possa essere scelto. Qui viene fatta una prima validazione (prima rispetto alla validazione che viene fatta nel back-end) di ciò che lo studente può o non può inserire.
+- `FullTableCarico` (in `CaricoDidattico.js`): Tabella contenente tutti gli esami che viene visualizzata nella home-page logged-in. Questa tabella ha in più rispetto alla precedente: il bottone di aggiunta, uno spazio per l'eventuale motivazione che spiega il perchè non può essere aggiunto. Le righe di questa tabella si colorano in maniera differente nel caso un esame sia già nel carico o nel caso non possa essere scelto. Qui viene fatta una prima validazione (prima rispetto alla validazione che viene fatta nel back-end) di ciò che lo studente può o non può inserire.
 - `CaricoDidattico` (in `CaricoDidattico.js`): Tabella che contiene il piano di studi dell'user. Qui viene fatta una prima validazione (prima rispetto alla validazione che viene fatta nel back-end) di ciò che lo studente può o non può eliminare.
 - `Salva Modifiche` (in `CaricoDidatticoLayout in CaricoDidattico.js`): Permette il salvataggio del piano di studi.
 - `Cancella Modifiche` (in `CaricoDidatticoLayout in CaricoDidattico.js`): Permette di cancellare le modifiche che sono state fatte a partire dall'ultimo salvataggio.
 - `Cancella il Piano di Studi` (in `CaricoDidatticoLayout in CaricoDidattico.js`): Permette di cancellare in maniera permanente il piano di studi e il dato relativo a full-time/part-time
-- `Svuota il Piano di Studi` (in `CaricoDidatticoLayout in CaricoDidattico.js`): Permette di svuotare il piano di studi per ripartire da zero. (ATTENZIONE: questo bottone non farà nessun salvataggio)
+- `Svuota il Piano di Studi` (in `CaricoDidatticoLayout in CaricoDidattico.js`): Permette di svuotare il piano di studi per ripartire da zero, non potendo però modificare l'opzione part-time, full-time. (ATTENZIONE: questo bottone non farà nessun salvataggio)
 
 ## Screenshot
 

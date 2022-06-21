@@ -4,7 +4,6 @@ import { useState } from 'react';
 function LoginForm(props) {
   const [username, setUsername] = useState('mario@polito.it');
   const [password, setPassword] = useState('password');
-  const [errorMessage, setErrorMessage] = useState('') ;
   
 
   const validateEmail = (email) => {
@@ -17,7 +16,7 @@ function LoginForm(props) {
 
   const handleSubmit = (event) => {
       event.preventDefault();
-      setErrorMessage('');
+      props.setMessage('');
       const credentials = { username, password };
       
       let valid = true;
@@ -33,7 +32,7 @@ function LoginForm(props) {
         props.login(credentials);
       }
       else {
-        setErrorMessage('Invalid Username and/or Password.')
+        props.setMessage('Invalid Username and/or Password.')
       }
   };
 
@@ -43,7 +42,6 @@ function LoginForm(props) {
               <Col>
                   <h2>Login</h2>
                   <Form>
-                      {errorMessage ? <Alert variant='danger'>{errorMessage}</Alert> : ''}
                       <Form.Group controlId='username'>
                           <Form.Label>email</Form.Label>
                           <Form.Control type='email' value={username} onChange={ev => setUsername(ev.target.value)} />

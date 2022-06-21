@@ -163,7 +163,7 @@ function NotFoundLayout() {
             404
           </h3>
           <span className="card-subtitle mb-2 text-muted text-center" >
-            Form Could Not Be Found
+            Pagina non trovata, premi il bottone per tornare alla Home!
           </span>
           <Link to="/">
             <div className="card-body mx-auto">

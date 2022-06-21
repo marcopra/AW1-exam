@@ -62,7 +62,7 @@ function App2() {
   }, []);
 
 
-  //Questa useEffect e quella successiva sono molto simili, ma per una chiarezza del codice sono 
+  //Questa useEffect e quella successiva sono molto simili, ma per una chiarezza del codice 
   //ne sono state dichiarate due diverse, questa che verrà invocata solo quando vi è un log-in/log-out
   // dell'utente, la successiva quando verrà messo dirty = true
   useEffect(() => {
@@ -209,7 +209,7 @@ function App2() {
           {/*-----------Home Page NON logged-in -----------*/} 
           <Route path = '/main' element = {loggedIn ? <Navigate to='/homePage' /> : <DefaultLayout exam = {exams}/>}/>
           {/*-----------Log-in page -----------*/} 
-          <Route path = '/login' element = {<LoginForm login={doLogIn}/>}/> 
+          <Route path = '/login' element = {<LoginForm login={doLogIn} setMessage = {setMessage}/>}/> 
           {/*-----------Main Page, redirect the user to the proper page -----------*/} 
           <Route path='/'   element={loggedIn ? <Navigate to='/homePage' /> : <Navigate to='/main' />  } /> 
           {/*-----------Home Page logged-in -----------*/} 
