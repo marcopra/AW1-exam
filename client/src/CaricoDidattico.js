@@ -38,6 +38,7 @@ function CaricoDidatticoLayout(props) {
                                 checked={props.fullTime != 0}
                                 disabled = {!props.newUser}
                                 onClick = {() => (setFullTime(1))}
+                                readOnly
                             />
                             <Form.Check
                                 inline
@@ -46,9 +47,9 @@ function CaricoDidatticoLayout(props) {
                                 type="radio"
                                 id={`inline-radio-2`}
                                 disabled = {!props.newUser}
-                
                                 checked={props.fullTime == 0}
                                 onClick = {() => (setFullTime(0))}
+                                readOnly
                             />
                         </div>
                     </Form>
