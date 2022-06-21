@@ -1,0 +1,102 @@
+/* Styles related to NavBar */
+.navbar-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.below-nav {
+  padding-top: 5rem;
+}
+
+.navbar-button{
+  background-color: darkblue;
+}
+
+/*Details Button Full Table*/
+.button-down {
+  height: 1em;
+  display: inline-block;
+  color: white;
+  
+  border-radius: 1em;
+  box-shadow: 0 0 0.2em #444;
+  box-sizing: content-box;
+  text-align: center;
+  text-indent: 0 !important;
+  font-family: "Courier New",Courier,monospace;
+  line-height: 1em;
+  content: "+";
+  background-color: #31b131;
+}
+
+.button-down:hover {
+  
+  background-color: #1a921a;
+  
+}
+
+.button-down:focus {
+  
+  background-color: #31b131;
+  
+}
+
+
+.button-up{
+  height: 1em;
+  display: inline-block;
+  color: white;
+
+  border-radius: 1em;
+  box-shadow: 0 0 0.2em #444;
+  box-sizing: content-box;
+  text-align: center;
+  text-indent: 0 !important;
+  font-family: "Courier New",Courier,monospace;
+  line-height: 1em;
+  content: "-";
+  background-color: #d33333;
+}
+
+.button-up:hover{
+  background-color: #aa1414;
+  
+}
+
+.button-up:focus {
+  
+  background-color: #d33333;
+  
+}
+
+.button-plus {
+  height: 1em;
+  display: inline-block;
+  color: white;
+  border-radius: 1em;
+  box-shadow: 0 0 0.2em #444;
+  box-sizing: content-box;
+  text-align: center;
+  text-indent: 0 !important;
+  font-family: "Courier New",Courier,monospace;
+  line-height: 1em;
+  content: "+";
+  background-color: #31b131;
+}
+
+.button-plus:disabled {
+  
+  background-color: gray;
+}
+
+.button-plus:focus{
+  background-color: #31b131;
+}
+
+
+/*Error page*/
+.main-card{
+  width: 1024px;
+  padding-top: 100;
+  
+}
