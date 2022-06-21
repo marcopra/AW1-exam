@@ -108,7 +108,7 @@
 ## Screenshot
 
 ![Home Page Non Logged-in](./images/HomePage_non_loggedIn.png)
-![Login](./images/Login.png)
+![Login](./images/LogIn.png)
 ![Home Page Non Logged-in](./images/HomePage_loggedIn.png)
 ![Page Not Found](./images/PageNotFound.png)
 
