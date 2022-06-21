@@ -33,6 +33,7 @@ function App2() {
   const [errorMsg, setErrorMsg] = useState('');  // stringa vuota '' = non c'e' errore
   const [message, setMessage] = useState(''); // stringa vuota '' = non c'e' errore
   const [exams, setExams] = useState([]);
+  const [serverOff, setServerOff] = useState(false)
   const [dirty, setDirty] = useState(false);
   const [cfu, setCfu] = useState(0);
 
@@ -68,8 +69,8 @@ function App2() {
     
     
     API.getAllCourses()
-      .then( (courses) => {setExams(courses); setDirty(false); } )
-      .catch( err => setErrorMsg("Impossibile caricare i corsi disponibili"));
+      .then( (courses) => {setExams(courses); setDirty(false); setMessage(""); setServerOff(false);} )
+      .catch( err => {setMessage("Impossibile caricare i corsi disponibili"); setServerOff(true);});
 
     if (loggedIn)
     {
@@ -114,9 +115,11 @@ function App2() {
         API.getAllCourses()
         .then( (courses) => {
           setExams(courses); 
-          setDirty(false); 
+          setDirty(false);
+          setMessage("");
+          setServerOff(false); 
         })
-        .catch( err => setErrorMsg("Impossibile caricare i corsi disponibili"));
+        .catch( err => {setMessage("Impossibile caricare i corsi disponibili"); setServerOff(true);});
         
       
         API.getCaricoDidatticoToDisplay()
@@ -198,7 +201,7 @@ function App2() {
     <>
       
       <Container className="App">
-        <Navigation loggedIn = {loggedIn} doLogOut = {doLogOut} user={user}/>
+        <Navigation loggedIn = {loggedIn} doLogOut = {doLogOut} user={user} error = {serverOff}/>
         <Row className = "below-nav"><Col>
         {message ? <Alert variant='danger' onClose={() => setMessage('')} dismissible>{message}</Alert> : false}
         </Col></Row>

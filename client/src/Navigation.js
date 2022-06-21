@@ -24,7 +24,7 @@ const Navigation = (props) => {
 
       <Nav className="ms-auto">
         <Nav.Item>
-         { location.pathname !== "/login" ? (!props.loggedIn ? <Button variant = "outline-light" className="my-2 my-sm-0" type="submit" onClick = {() => navigate('/login')}> <i className="bi bi-person"/> Login</Button> : <LogoutButton logout={props.doLogOut} user={props.user}/>) : null}
+         { location.pathname !== "/login" ? (!props.loggedIn ? <Button disabled = {props.error ? true : false} variant = "outline-light" className="my-2 my-sm-0" type="submit" onClick = {() => navigate('/login')}> <i className="bi bi-person"/> Login</Button> : <LogoutButton logout={props.doLogOut} user={props.user}/>) : null}
         </Nav.Item>
       </Nav>
     </Navbar>

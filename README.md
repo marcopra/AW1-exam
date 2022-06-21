@@ -114,5 +114,9 @@
 
 ## Users Credentials
 
-- username, password (plus any other requested info)
-- username, password (plus any other requested info)
+- username: mario@polito.it, password: password -> part-time
+- username: marco@polito.it, password: password -> full-time
+- username: anna@polito.it,  password: password -> Piano di studi vuoto
+- username: maria@polito.it, password: password -> part-time
+- username: ronaldo@polito.it, password: password -> Piano di studi vuoto
+- username: totti@polito.it, password: password -> Piano di studi vuoto
